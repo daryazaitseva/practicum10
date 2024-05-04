@@ -6,15 +6,17 @@ with open('output.txt', 'w') as f2:
         sum += int(sp[i])
     f2.write(str(sum / 31))
     f2.write('\n')
+
     sum = 0
     for i in range(31, 31 + 28 + 1):
         sum += int(sp[i])
     f2.write(str(sum / 28))
     f2.write('\n')
+
     sum = 0
     d = 0
     for m in range(10):
-        if m % 2 == 0 and m != 2:
+        if m % 2 == 0:
             for d in range(31):
                 sum += int(sp[d])
                 d += 1
